@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "tips":       "Dicas",
+    "products":   "Produtos",
+    "community":  "Comunidade",
+    "signin":     "Entrar",
+    "getStarted": "Começar"
+  },
+  "hero": {
+    "badge":    "Seu consultor pessoal de higiene",
+    "headline": "Sinta-se confiante na sua pele.",
+    "sub":      "Dicas especializadas de higiene, recomendações de produtos selecionados e uma comunidade anônima — tudo em um espaço sem julgamentos.",
+    "cta":      "Começar gratuitamente",
+    "community": "Ver comunidade"
+  },
+  "tips": {
+    "title":       "Dicas de Higiene",
+    "subtitle":    "Conselhos baseados em evidências para cada parte da sua rotina.",
+    "freeTips":    "Dicas gratuitas",
+    "premiumTips": "Dicas premium",
+    "proOnly":     "Somente Pro",
+    "minRead":     "{n} min de leitura"
+  },
+  "community": {
+    "title":       "Comunidade",
+    "subtitle":    "Pergunte qualquer coisa — anônimo por padrão.",
+    "ask":         "Fazer uma pergunta",
+    "trending":    "Em alta",
+    "recent":      "Recentes",
+    "anonymous":   "Anônimo",
+    "replies":     "{n} respostas",
+    "votes":       "{n} votos"
+  },
+  "pricing": {
+    "title":    "Preços simples",
+    "subtitle": "Comece gratuitamente, atualize quando estiver pronto",
+    "free":     "Gratuito",
+    "pro":      "Pro",
+    "month":    "/mês",
+    "year":     "/ano",
+    "trial":    "Iniciar teste gratuito de 7 dias"
+  },
+  "auth": {
+    "login":         "Bem-vindo de volta",
+    "signup":        "Crie sua conta",
+    "email":         "Endereço de e-mail",
+    "password":      "Senha",
+    "name":          "Nome completo",
+    "signin":        "Entrar",
+    "createAccount": "Criar conta",
+    "google":        "Continuar com o Google",
+    "forgotPass":    "Esqueceu a senha?",
+    "noAccount":     "Não tem uma conta?",
+    "haveAccount":   "Já tem uma conta?"
+  },
+  "settings": {
+    "title":    "Configurações",
+    "profile":  "Perfil",
+    "billing":  "Cobrança",
+    "language": "Idioma",
+    "save":     "Salvar alterações",
+    "saved":    "Salvo!"
+  }
+}

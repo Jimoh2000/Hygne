@@ -1,0 +1,16 @@
+import { NextResponse } from 'next/server'
+
+export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
+
+export async function GET() {
+  return NextResponse.json(
+    {
+      status:    'ok',
+      service:   'hgyne',
+      timestamp: new Date().toISOString(),
+      version:   process.env.npm_package_version ?? '0.1.0',
+    },
+    { status: 200 }
+  )
+}

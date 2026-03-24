@@ -1,0 +1,96 @@
+# ══════════════════════════════════════════════════════════════
+# HGyne — Cloud Run Service Definition
+# Apply with: gcloud run services replace infra/cloudrun.yaml --region=us-central1
+# ══════════════════════════════════════════════════════════════
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: hgyne
+  labels:
+    app: hgyne
+    environment: production
+  annotations:
+    run.googleapis.com/ingress: all
+spec:
+  template:
+    metadata:
+      annotations:
+        # Scale to zero when no traffic (cost saving)
+        autoscaling.knative.dev/minScale: "0"
+        autoscaling.knative.dev/maxScale: "10"
+        # Startup CPU boost for faster cold starts
+        run.googleapis.com/startup-cpu-boost: "true"
+    spec:
+      containerConcurrency: 80
+      timeoutSeconds: 30
+      serviceAccountName: hgyne-deploy@PROJECT_ID.iam.gserviceaccount.com
+      containers:
+        - image: us-central1-docker.pkg.dev/PROJECT_ID/hgyne-repo/hgyne:latest
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              cpu: "1"
+              memory: 512Mi
+            requests:
+              cpu: "0.1"
+              memory: 128Mi
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: NEXT_TELEMETRY_DISABLED
+              value: "1"
+            - name: PORT
+              value: "8080"
+          # Secrets mounted from Secret Manager
+          envFrom: []
+          volumeMounts: []
+          # Secrets as individual env vars
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: NEXT_TELEMETRY_DISABLED
+              value: "1"
+            - name: PORT
+              value: "8080"
+            - name: SUPABASE_SERVICE_ROLE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: SUPABASE_SERVICE_ROLE_KEY
+                  key: latest
+            - name: PADDLE_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: PADDLE_API_KEY
+                  key: latest
+            - name: PADDLE_WEBHOOK_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: PADDLE_WEBHOOK_SECRET
+                  key: latest
+            - name: RESEND_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: RESEND_API_KEY
+                  key: latest
+            - name: NEXTAUTH_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: NEXTAUTH_SECRET
+                  key: latest
+          # Health check
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          startupProbe:
+            httpGet:
+              path: /api/health
+              port: 8080
+            failureThreshold: 3
+            periodSeconds: 10
+  traffic:
+    - percent: 100
+      latestRevision: true

@@ -1,0 +1,9 @@
+{
+  "nav": { "tips": "Consejos", "products": "Productos", "community": "Comunidad", "signin": "Iniciar sesión", "getStarted": "Comenzar" },
+  "hero": { "badge": "Tu asesor personal de higiene", "headline": "Siéntete seguro en tu piel.", "sub": "Consejos de higiene, recomendaciones de productos y una comunidad anónima — todo en un espacio sin juicios.", "cta": "Comenzar gratis", "community": "Ver comunidad" },
+  "tips": { "title": "Consejos de Higiene", "subtitle": "Consejos basados en evidencia para cada parte de tu rutina.", "freeTips": "Consejos gratuitos", "premiumTips": "Consejos premium", "proOnly": "Solo Pro", "minRead": "{n} min de lectura" },
+  "community": { "title": "Comunidad", "subtitle": "Pregunta lo que quieras — anónimo por defecto.", "ask": "Hacer una pregunta", "trending": "Tendencias", "recent": "Recientes", "anonymous": "Anónimo", "replies": "{n} respuestas", "votes": "{n} votos" },
+  "pricing": { "title": "Precios simples", "subtitle": "Comienza gratis, actualiza cuando estés listo", "free": "Gratis", "pro": "Pro", "month": "/mes", "year": "/año", "trial": "Iniciar prueba gratuita de 7 días" },
+  "auth": { "login": "Bienvenido de nuevo", "signup": "Crea tu cuenta", "email": "Correo electrónico", "password": "Contraseña", "name": "Nombre completo", "signin": "Iniciar sesión", "createAccount": "Crear cuenta", "google": "Continuar con Google", "forgotPass": "¿Olvidaste tu contraseña?", "noAccount": "¿No tienes cuenta?", "haveAccount": "¿Ya tienes cuenta?" },
+  "settings": { "title": "Configuración", "profile": "Perfil", "billing": "Facturación", "language": "Idioma", "save": "Guardar cambios", "saved": "¡Guardado!" }
+}

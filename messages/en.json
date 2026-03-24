@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "tips":       "Tips",
+    "products":   "Products",
+    "community":  "Community",
+    "signin":     "Sign in",
+    "getStarted": "Get started"
+  },
+  "hero": {
+    "badge":    "Your personal hygiene advisor",
+    "headline": "Feel confident in your skin.",
+    "sub":      "Expert hygiene tips, curated product recommendations, and an anonymous community — all in one judgment-free space.",
+    "cta":      "Start for free",
+    "community": "Browse community"
+  },
+  "tips": {
+    "title":       "Hygiene Tips",
+    "subtitle":    "Evidence-based advice for every part of your routine.",
+    "freeTips":    "Free tips",
+    "premiumTips": "Premium tips",
+    "proOnly":     "Pro only",
+    "minRead":     "{n} min read"
+  },
+  "community": {
+    "title":       "Community",
+    "subtitle":    "Ask anything — anonymous by default.",
+    "ask":         "Ask a question",
+    "trending":    "Trending",
+    "recent":      "Recent",
+    "anonymous":   "Anonymous",
+    "replies":     "{n} replies",
+    "votes":       "{n} votes"
+  },
+  "pricing": {
+    "title":    "Simple pricing",
+    "subtitle": "Start free, upgrade when ready",
+    "free":     "Free",
+    "pro":      "Pro",
+    "month":    "/month",
+    "year":     "/year",
+    "trial":    "Start 7-day free trial"
+  },
+  "auth": {
+    "login":         "Welcome back",
+    "signup":        "Create your account",
+    "email":         "Email address",
+    "password":      "Password",
+    "name":          "Full name",
+    "signin":        "Sign in",
+    "createAccount": "Create account",
+    "google":        "Continue with Google",
+    "forgotPass":    "Forgot password?",
+    "noAccount":     "Don't have an account?",
+    "haveAccount":   "Already have an account?"
+  },
+  "settings": {
+    "title":    "Settings",
+    "profile":  "Profile",
+    "billing":  "Billing",
+    "language": "Language",
+    "save":     "Save changes",
+    "saved":    "Saved!"
+  }
+}

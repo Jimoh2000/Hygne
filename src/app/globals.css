@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap');
+
+:root {
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  --brand-50:  #f2f8f4;
+  --brand-100: #e0f0e6;
+  --brand-500: #358f63;
+  --brand-600: #23724d;
+  --brand-700: #1a5a3d;
+  --brand-900: #0f3522;
+
+  --blush-400: #ed8585;
+  --blush-500: #e05c5c;
+  --blush-600: #cb3f3f;
+
+  --cream-50:  #fdfcf8;
+  --cream-100: #faf7ef;
+  --cream-200: #f4eddb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--cream-50);
+  color: #1a1a1a;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: rgba(53, 143, 99, 0.2);
+    color: var(--brand-900);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand-500);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-600 text-white font-medium rounded-xl text-sm transition-all duration-200 hover:bg-brand-700 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-brand-700 font-medium rounded-xl text-sm border border-brand-200 transition-all duration-200 hover:bg-brand-50 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed shadow-sm;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-brand-700 font-medium rounded-lg text-sm transition-all duration-200 hover:bg-brand-50 active:scale-[0.98] disabled:opacity-50;
+  }
+
+  .input-base {
+    @apply w-full px-4 py-3 bg-white border border-cream-300 rounded-xl text-sm text-gray-900 placeholder:text-gray-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent;
+  }
+
+  .card-base {
+    @apply bg-white rounded-2xl border border-cream-200 shadow-card;
+  }
+
+  .badge-free {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cream-100 text-brand-700;
+  }
+
+  .badge-pro {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-100 text-brand-700;
+  }
+
+  .badge-premium {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-700 border border-amber-200;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-widest uppercase text-brand-500;
+  }
+
+  .prose-hgyne {
+    @apply text-gray-700 leading-relaxed;
+  }
+
+  .prose-hgyne h2 {
+    @apply text-2xl font-serif text-gray-900 mt-8 mb-4;
+  }
+
+  .prose-hgyne h3 {
+    @apply text-xl font-serif text-gray-900 mt-6 mb-3;
+  }
+
+  .prose-hgyne p {
+    @apply mb-4;
+  }
+
+  .prose-hgyne ul {
+    @apply list-disc list-inside mb-4 space-y-2;
+  }
+
+  .prose-hgyne strong {
+    @apply font-semibold text-gray-900;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-600 to-brand-400 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .animate-in {
+    animation: slideUp 0.4s ease-out both;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* Paddle overlay */
+.paddle-checkout-frame {
+  border-radius: 16px !important;
+}
